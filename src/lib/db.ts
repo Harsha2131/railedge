@@ -59,7 +59,7 @@ export async function getTrains(): Promise<Train[]> {
     rating: Number(r.rating),
     onTimePercent: Number(r.on_time_percent),
     distance: Number(r.distance),
-    classes: r.classes,
+    classes: typeof r.classes === 'string' ? JSON.parse(r.classes) : r.classes,
     days: r.days,
   }));
 }
@@ -127,7 +127,7 @@ export async function getBookings(userId?: string): Promise<Booking[]> {
     arrival: r.arrival,
     date: r.date,
     class: r.class,
-    passengers: r.passengers,
+    passengers: typeof r.passengers === 'string' ? JSON.parse(r.passengers) : r.passengers,
     totalAmount: Number(r.total_amount),
     status: r.status as 'CONFIRMED' | 'CANCELLED' | 'WAITING',
     bookedAt: r.booked_at,
