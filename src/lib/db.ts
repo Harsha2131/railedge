@@ -30,13 +30,14 @@ export interface User {
   notifications?: NotificationSettings;
 }
 
-// Use POSTGRES_URL (pooled) or fall back to POSTGRES_URL_NON_POOLING (direct)
-// Both are provided by Supabase's Vercel integration
-const connectionString = process.env.POSTGRES_URL || process.env.POSTGRES_URL_NON_POOLING!;
+// Use POSTGRES_URL_NON_POOLING (direct connection) — more reliable for serverless + DDL
+// Falls back to POSTGRES_URL if non-pooling is unavailable
+const connectionString = process.env.POSTGRES_URL_NON_POOLING || process.env.POSTGRES_URL!;
 
 const sql = postgres(connectionString, {
-  ssl: 'require',
-  max: 1, // important for serverless / edge functions
+  ssl: { rejectUnauthorized: false }, // Required for Supabase SSL
+  max: 1,           // Serverless-safe: one connection per function instance
+  connect_timeout: 10,
 });
 
 export { sql };
