@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readDB } from '@/lib/db';
+import { getUsers } from '@/lib/db';
 
 export async function POST(request: Request) {
   try {
@@ -10,7 +10,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Email and password are required' }, { status: 400 });
     }
 
-    const { getUsers } = await import('@/lib/db');
     const users = await getUsers();
     const user = users.find(u => u.email === email && u.password === password);
 

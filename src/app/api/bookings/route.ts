@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readDB, writeDB } from '@/lib/db';
+import { getBookings, createBooking } from '@/lib/db';
 import { Booking } from '@/lib/mockData';
 
 export async function GET(request: Request) {
@@ -7,7 +7,6 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const userId = searchParams.get('userId');
 
-    const { getBookings } = await import('@/lib/db');
     const bookings = await getBookings(userId || undefined);
     return NextResponse.json(bookings);
   } catch (error) {
@@ -19,7 +18,6 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { createBooking } = await import('@/lib/db');
     const newBooking = await createBooking(body);
     return NextResponse.json(newBooking, { status: 201 });
   } catch (error) {

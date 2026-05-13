@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readDB, writeDB, User } from '@/lib/db';
+import { getUsers, createUser, User } from '@/lib/db';
 
 export async function POST(request: Request) {
   try {
@@ -14,7 +14,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Password must be at least 6 characters' }, { status: 400 });
     }
 
-    const { getUsers, createUser } = await import('@/lib/db');
     const users = await getUsers();
     
     if (users.some(u => u.email === email)) {

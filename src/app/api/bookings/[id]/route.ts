@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readDB, writeDB } from '@/lib/db';
+import { cancelBooking, getBookings } from '@/lib/db';
 
 export async function PATCH(
   request: Request,
@@ -7,7 +7,6 @@ export async function PATCH(
 ) {
   try {
     const { id } = await params;
-    const { cancelBooking, getBookings } = await import('@/lib/db');
     const success = await cancelBooking(id);
 
     if (!success) {

@@ -137,3 +137,8 @@ export async function createUser(user: User): Promise<User> {
   `;
   return user;
 }
+
+export async function deleteUser(id: string): Promise<boolean> {
+  const result = await sql`DELETE FROM users WHERE id = ${id};`;
+  return result.rowCount > 0;
+}
