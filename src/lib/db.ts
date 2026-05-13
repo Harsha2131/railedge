@@ -99,7 +99,7 @@ export async function getBookings(userId?: string): Promise<Booking[]> {
 
 export async function createBooking(booking: Booking): Promise<Booking> {
   const id = 'bk' + Date.now();
-  const pnr = 'PNR' + Math.floor(Math.random() * 9000000 + 1000000);
+  const pnr = booking.pnr || ('PNR' + Math.floor(Math.random() * 9000000 + 1000000));
   const bookedAt = new Date().toISOString();
   
   await sql`

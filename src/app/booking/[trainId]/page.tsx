@@ -78,11 +78,18 @@ function BookingContent() {
 
   const handlePayment = async () => {
     if (!user) { router.push('/auth/login'); return; }
+    
+    // Generate PNR immediately so it's ready for the UI
+    const generatedPnr = 'PNR' + Math.floor(Math.random() * 9000000 + 1000000);
+    setPnr(generatedPnr);
+    
     const methodLabel = paymentMethod === 'upi' ? 'UPI' : paymentMethod === 'card' ? 'Card' : 'Net Banking';
     setStep(4);
+
     try {
       const payload = {
         userId: user.id,
+        pnr: generatedPnr, // Send the pre-generated PNR to the server
         trainName: train.name,
         trainNumber: train.number,
         source: train.source,
@@ -116,18 +123,14 @@ function BookingContent() {
       
       const saved = await res.json();
       
-      // On Vercel, the write might fail but we should still show the PNR to the user
-      if (saved.error || !saved.pnr) {
-        throw new Error('Database write restricted');
+      // If the server returned a specific PNR, use that instead
+      if (saved && saved.pnr) {
+        setPnr(saved.pnr);
       }
       
-      setPnr(saved.pnr);
       setTimeout(() => setConfirmed(true), 1500);
     } catch (err) {
-      console.warn('Booking persistence restricted (Serverless Mode):', err);
-      // Generate a demo PNR if the server can't save the file
-      const demoPnr = 'PNR' + Math.floor(Math.random() * 9000000 + 1000000);
-      setPnr(demoPnr);
+      console.warn('Booking persistence limited:', err);
       setTimeout(() => setConfirmed(true), 1800);
     }
   };
