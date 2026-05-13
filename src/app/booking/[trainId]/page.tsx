@@ -263,7 +263,7 @@ function BookingContent() {
                 <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: '1.5rem' }}>Your ticket has been booked successfully</p>
                 <div style={{ background: 'linear-gradient(135deg,#eff6ff,#f5f3ff)', border: '2px dashed #c4b5fd', borderRadius: 14, padding: '1.25rem', marginBottom: '1.5rem' }}>
                   <p style={{ fontSize: '0.72rem', fontWeight: 700, color: '#7c3aed', textTransform: 'uppercase', marginBottom: '0.25rem' }}>PNR Number</p>
-                  <p style={{ fontSize: '1.9rem', fontWeight: 900, color: '#2563eb', letterSpacing: '0.1em' }}>{pnr}</p>
+                  <p style={{ fontSize: '1.9rem', fontWeight: 900, color: '#2563eb', letterSpacing: '0.1em' }}>{pnr || 'Generating...'}</p>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1.5rem', textAlign: 'left' }}>
                   {[

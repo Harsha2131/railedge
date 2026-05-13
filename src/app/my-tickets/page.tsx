@@ -143,7 +143,7 @@ export default function MyTicketsPage() {
 
   useEffect(() => {
     if (user) {
-      fetch(`/api/bookings?userId=${user.id}`)
+      fetch(`/api/bookings?userId=${user.id}`, { cache: 'no-store' })
         .then(res => res.json())
         .then(data => setBookings(Array.isArray(data) ? data : []))
         .catch(() => setBookings([]))
@@ -257,7 +257,7 @@ export default function MyTicketsPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {filtered.map(booking => {
                 const st = STATUS_STYLES[booking.status];
-                const isUpcoming = booking.date >= todayString && (booking.status === 'CONFIRMED' || booking.status === 'WAITING');
+                const isUpcoming = booking.status === 'CONFIRMED' || booking.status === 'WAITING';
                 return (
                   <div key={booking.id} className="ticket-card" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 16, overflow: 'hidden', transition: 'all 0.2s' }}>
                     <div style={{ background: 'linear-gradient(135deg, #0f172a, #1e3a5f)', padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -265,6 +265,7 @@ export default function MyTicketsPage() {
                         <Train size={16} color="rgba(255,255,255,0.7)" />
                         <span style={{ fontSize: '0.95rem', fontWeight: 800, color: '#fff' }}>{booking.trainName}</span>
                         <span style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.5)' }}>#{booking.trainNumber}</span>
+                        <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#60a5fa', marginLeft: '0.5rem', borderLeft: '1px solid rgba(255,255,255,0.2)', paddingLeft: '0.5rem' }}>PNR: {booking.pnr}</span>
                       </div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                         {booking.paymentMethod && (

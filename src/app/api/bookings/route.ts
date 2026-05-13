@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { getBookings, createBooking } from '@/lib/db';
 import { Booking } from '@/lib/mockData';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
