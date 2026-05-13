@@ -59,10 +59,6 @@ export default function ProfilePage() {
     }
   };
 
-  const handleToggle2FA = () => {
-    const newValue = !user?.twoFactorEnabled;
-    updateSetting('twoFactorEnabled', newValue);
-  };
 
   const handleUpdateNotifications = (key: string) => {
     const newNotifications = { ...notifications, [key]: !(notifications as any)[key] };
@@ -289,15 +285,6 @@ export default function ProfilePage() {
                         <p style={{ fontSize: '0.8rem', color: '#64748b' }}>Last changed recently</p>
                       </div>
                       <button onClick={() => setShowPasswordModal(true)} style={{ background: '#2563eb15', color: '#2563eb', border: '1px solid #2563eb40', borderRadius: 10, padding: '0.5rem 1rem', fontWeight: 700, cursor: 'pointer', fontSize: '0.8rem', whiteSpace: 'nowrap' }}>Update</button>
-                    </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.125rem', background: '#f8fafc', borderRadius: 12, border: '1px solid #e2e8f0' }}>
-                      <div>
-                        <p style={{ fontWeight: 700, fontSize: '0.925rem', color: '#0f172a', marginBottom: '0.2rem' }}>Two-Factor Authentication</p>
-                        <p style={{ fontSize: '0.8rem', color: '#64748b' }}>{user?.twoFactorEnabled ? '2FA is active' : '2FA is currently disabled'}</p>
-                      </div>
-                      <button onClick={handleToggle2FA} style={{ background: user?.twoFactorEnabled ? '#22c55e15' : '#e2e8f0', color: user?.twoFactorEnabled ? '#22c55e' : '#64748b', border: 'none', borderRadius: 10, padding: '0.5rem 1rem', fontWeight: 700, cursor: 'pointer', fontSize: '0.8rem' }}>
-                        {user?.twoFactorEnabled ? 'Enabled' : 'Enable'}
-                      </button>
                     </div>
                   </div>
                 </>
