@@ -46,7 +46,7 @@ export async function getTrains(): Promise<Train[]> {
     arrival: r.arrival,
     duration: r.duration,
     classes: typeof r.classes === 'string' ? JSON.parse(r.classes) : r.classes,
-    daysActive: r.days_active
+    days: r.days_active
   }));
 }
 

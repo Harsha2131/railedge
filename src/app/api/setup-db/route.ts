@@ -94,7 +94,7 @@ export async function GET() {
           ${train.arrival}, 
           ${train.duration}, 
           ${JSON.stringify(train.classes)}, 
-          ${train.daysActive}
+          ${train.days}
         )
         ON CONFLICT (id) DO NOTHING;
       `;
