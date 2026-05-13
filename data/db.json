@@ -1,0 +1,5965 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Harsha S",
+      "email": "harsha@example.com",
+      "password": "pass123",
+      "role": "USER",
+      "bookings": 2,
+      "joined": "2024-01-01",
+      "status": "active",
+      "twoFactorEnabled": true,
+      "phone": "07619581829",
+      "city": "Banglore",
+      "gender": "Male",
+      "paymentMethods": [
+        {
+          "type": "Credit Card",
+          "detail": "**** **** **** 4521",
+          "icon": "💳",
+          "active": false
+        },
+        {
+          "type": "Net Banking",
+          "detail": "SBI — Savings Account",
+          "icon": "🏦",
+          "active": false
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "name": "Admin User",
+      "email": "admin@railedge.in",
+      "password": "admin123",
+      "role": "ADMIN",
+      "bookings": 0,
+      "joined": "2024-01-01",
+      "status": "active"
+    },
+    {
+      "id": "u1778659620584",
+      "name": "Basanth ",
+      "email": "basanthp59@gmail.com",
+      "password": "basanth@123",
+      "role": "USER"
+    }
+  ],
+  "trains": [
+    {
+      "id": "1",
+      "name": "Rajdhani Express",
+      "number": "12304",
+      "type": "RAJDHANI",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Mumbai Central",
+      "destinationCode": "MMCT",
+      "departure": "16:25",
+      "arrival": "08:00",
+      "duration": "15h 35m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1384,
+      "rating": 4.6,
+      "onTimePercent": 87,
+      "classes": [
+        {
+          "name": "1st AC",
+          "code": "1A",
+          "basePrice": 4560,
+          "available": 6,
+          "total": 24,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 2720,
+          "available": 18,
+          "total": 48,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1845,
+          "available": 34,
+          "total": 64,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 650,
+          "available": 0,
+          "total": 72,
+          "status": "WAITING"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Garib Rath Express",
+      "number": "12909",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Mumbai Central",
+      "destinationCode": "MMCT",
+      "departure": "12:55",
+      "arrival": "08:35",
+      "duration": "19h 40m",
+      "days": [
+        "Mon",
+        "Fri"
+      ],
+      "distance": 1384,
+      "rating": 3.9,
+      "onTimePercent": 71,
+      "classes": [
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1120,
+          "available": 60,
+          "total": 120,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 380,
+          "available": 0,
+          "total": 200,
+          "status": "WAITING"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Shatabdi Express",
+      "number": "12001",
+      "type": "SHATABDI",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Bhopal Junction",
+      "destinationCode": "BPL",
+      "departure": "06:00",
+      "arrival": "13:50",
+      "duration": "7h 50m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 704,
+      "rating": 4.7,
+      "onTimePercent": 91,
+      "classes": [
+        {
+          "name": "Chair Car",
+          "code": "CC",
+          "basePrice": 1180,
+          "available": 40,
+          "total": 78,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Exec Chair Car",
+          "code": "EC",
+          "basePrice": 2280,
+          "available": 15,
+          "total": 56,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Kerala Express",
+      "number": "12625",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Trivandrum Central",
+      "destinationCode": "TVC",
+      "departure": "11:35",
+      "arrival": "16:30",
+      "duration": "52h 55m",
+      "days": [
+        "Mon",
+        "Wed",
+        "Fri"
+      ],
+      "distance": 3054,
+      "rating": 4.1,
+      "onTimePercent": 68,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 3200,
+          "available": 12,
+          "total": 48,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 2100,
+          "available": 28,
+          "total": 64,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 720,
+          "available": 45,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Golden Temple Mail",
+      "number": "12903",
+      "type": "SUPERFAST",
+      "source": "Mumbai Central",
+      "sourceCode": "MMCT",
+      "destination": "Amritsar Junction",
+      "destinationCode": "ASR",
+      "departure": "21:35",
+      "arrival": "05:15",
+      "duration": "31h 40m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1930,
+      "rating": 4.2,
+      "onTimePercent": 75,
+      "classes": [
+        {
+          "name": "1st AC",
+          "code": "1A",
+          "basePrice": 5200,
+          "available": 4,
+          "total": 18,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 2980,
+          "available": 14,
+          "total": 48,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1980,
+          "available": 30,
+          "total": 64,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 680,
+          "available": 0,
+          "total": 200,
+          "status": "WAITING"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Coromandel Express",
+      "number": "12841",
+      "type": "SUPERFAST",
+      "source": "Kolkata Howrah",
+      "sourceCode": "HWH",
+      "destination": "Chennai Central",
+      "destinationCode": "MAS",
+      "departure": "14:35",
+      "arrival": "16:10",
+      "duration": "25h 35m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1662,
+      "rating": 4.4,
+      "onTimePercent": 80,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 2560,
+          "available": 20,
+          "total": 48,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1720,
+          "available": 38,
+          "total": 64,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 580,
+          "available": 5,
+          "total": 120,
+          "status": "RAC"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Bangalore Rajdhani",
+      "number": "22691",
+      "type": "RAJDHANI",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Bangalore City",
+      "destinationCode": "SBC",
+      "departure": "20:00",
+      "arrival": "05:00",
+      "duration": "33h 00m",
+      "days": [
+        "Tue",
+        "Thu",
+        "Sun"
+      ],
+      "distance": 2150,
+      "rating": 4.5,
+      "onTimePercent": 83,
+      "classes": [
+        {
+          "name": "1st AC",
+          "code": "1A",
+          "basePrice": 6100,
+          "available": 8,
+          "total": 18,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 3480,
+          "available": 22,
+          "total": 48,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 2380,
+          "available": 40,
+          "total": 64,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Howrah Rajdhani",
+      "number": "12301",
+      "type": "RAJDHANI",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Kolkata Howrah",
+      "destinationCode": "HWH",
+      "departure": "16:55",
+      "arrival": "09:55",
+      "duration": "17h 00m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1447,
+      "rating": 4.6,
+      "onTimePercent": 86,
+      "classes": [
+        {
+          "name": "1st AC",
+          "code": "1A",
+          "basePrice": 4980,
+          "available": 6,
+          "total": 18,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 2980,
+          "available": 18,
+          "total": 48,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 2150,
+          "available": 32,
+          "total": 64,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Deccan Queen",
+      "number": "12123",
+      "type": "SHATABDI",
+      "source": "Mumbai CST",
+      "sourceCode": "CSTM",
+      "destination": "Pune Junction",
+      "destinationCode": "PUNE",
+      "departure": "07:15",
+      "arrival": "10:25",
+      "duration": "3h 10m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 192,
+      "rating": 4.8,
+      "onTimePercent": 93,
+      "classes": [
+        {
+          "name": "Chair Car",
+          "code": "CC",
+          "basePrice": 420,
+          "available": 60,
+          "total": 100,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Exec Chair Car",
+          "code": "EC",
+          "basePrice": 850,
+          "available": 20,
+          "total": 40,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Chennai Rajdhani",
+      "number": "12433",
+      "type": "RAJDHANI",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Chennai Central",
+      "destinationCode": "MAS",
+      "departure": "15:55",
+      "arrival": "15:25",
+      "duration": "23h 30m",
+      "days": [
+        "Tue",
+        "Wed",
+        "Fri",
+        "Sun"
+      ],
+      "distance": 2188,
+      "rating": 4.4,
+      "onTimePercent": 79,
+      "classes": [
+        {
+          "name": "1st AC",
+          "code": "1A",
+          "basePrice": 5800,
+          "available": 10,
+          "total": 18,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 3350,
+          "available": 24,
+          "total": 48,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 2280,
+          "available": 44,
+          "total": 64,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Bangalore Shatabdi",
+      "number": "12007",
+      "type": "SHATABDI",
+      "source": "Mysuru Junction",
+      "sourceCode": "MYS",
+      "destination": "Chennai Central",
+      "destinationCode": "MAS",
+      "departure": "06:10",
+      "arrival": "12:30",
+      "duration": "6h 20m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 497,
+      "rating": 4.6,
+      "onTimePercent": 88,
+      "classes": [
+        {
+          "name": "Chair Car",
+          "code": "CC",
+          "basePrice": 780,
+          "available": 50,
+          "total": 78,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Exec Chair Car",
+          "code": "EC",
+          "basePrice": 1580,
+          "available": 18,
+          "total": 56,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Patna Rajdhani",
+      "number": "12309",
+      "type": "RAJDHANI",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Patna Junction",
+      "destinationCode": "PNBE",
+      "departure": "18:25",
+      "arrival": "05:00",
+      "duration": "10h 35m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1001,
+      "rating": 4.3,
+      "onTimePercent": 77,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 2180,
+          "available": 16,
+          "total": 48,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1580,
+          "available": 36,
+          "total": 64,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 520,
+          "available": 12,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Ahmedabad Shatabdi",
+      "number": "12009",
+      "type": "SHATABDI",
+      "source": "Mumbai Central",
+      "sourceCode": "MMCT",
+      "destination": "Ahmedabad Junction",
+      "destinationCode": "ADI",
+      "departure": "06:25",
+      "arrival": "12:30",
+      "duration": "6h 05m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 493,
+      "rating": 4.5,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "Chair Car",
+          "code": "CC",
+          "basePrice": 760,
+          "available": 42,
+          "total": 78,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Exec Chair Car",
+          "code": "EC",
+          "basePrice": 1480,
+          "available": 16,
+          "total": 56,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-NZM",
+      "name": "New Delhi Express",
+      "number": "12001",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Hazrat Nizamuddin",
+      "destinationCode": "NZM",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 345,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1210,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 805,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 353,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-NZM",
+      "name": "New Delhi Express",
+      "number": "12001R",
+      "type": "EXPRESS",
+      "source": "Hazrat Nizamuddin",
+      "sourceCode": "NZM",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 345,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1210,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 805,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 353,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-MMCT",
+      "name": "Mumbai Express",
+      "number": "12002",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Mumbai Central",
+      "destinationCode": "MMCT",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 390,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1220,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 810,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 356,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-MMCT",
+      "name": "New Delhi Express",
+      "number": "12002R",
+      "type": "EXPRESS",
+      "source": "Mumbai Central",
+      "sourceCode": "MMCT",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 390,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1220,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 810,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 356,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-CSTM",
+      "name": "Mumbai Express",
+      "number": "12003",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Mumbai CST",
+      "destinationCode": "CSTM",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 435,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1230,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 815,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 359,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-CSTM",
+      "name": "New Delhi Express",
+      "number": "12003R",
+      "type": "EXPRESS",
+      "source": "Mumbai CST",
+      "sourceCode": "CSTM",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 435,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1230,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 815,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 359,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-MAS",
+      "name": "Chennai Express",
+      "number": "12004",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Chennai Central",
+      "destinationCode": "MAS",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 480,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1240,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 820,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 362,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-MAS",
+      "name": "New Delhi Express",
+      "number": "12004R",
+      "type": "EXPRESS",
+      "source": "Chennai Central",
+      "sourceCode": "MAS",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 480,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1240,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 820,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 362,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-MS",
+      "name": "Chennai Express",
+      "number": "12005",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Chennai Egmore",
+      "destinationCode": "MS",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 525,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1250,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 825,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 365,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-MS",
+      "name": "New Delhi Express",
+      "number": "12005R",
+      "type": "EXPRESS",
+      "source": "Chennai Egmore",
+      "sourceCode": "MS",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 525,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1250,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 825,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 365,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-HWH",
+      "name": "Kolkata Express",
+      "number": "12006",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Kolkata Howrah",
+      "destinationCode": "HWH",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 570,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1260,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 830,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 368,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-HWH",
+      "name": "New Delhi Express",
+      "number": "12006R",
+      "type": "EXPRESS",
+      "source": "Kolkata Howrah",
+      "sourceCode": "HWH",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 570,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1260,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 830,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 368,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-SDAH",
+      "name": "Kolkata Express",
+      "number": "12007",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Kolkata Sealdah",
+      "destinationCode": "SDAH",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 615,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1270,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 835,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 371,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-SDAH",
+      "name": "New Delhi Express",
+      "number": "12007R",
+      "type": "EXPRESS",
+      "source": "Kolkata Sealdah",
+      "sourceCode": "SDAH",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 615,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1270,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 835,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 371,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-SBC",
+      "name": "Bangalore Express",
+      "number": "12008",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Bangalore City",
+      "destinationCode": "SBC",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 660,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1280,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 840,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 374,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-SBC",
+      "name": "New Delhi Express",
+      "number": "12008R",
+      "type": "EXPRESS",
+      "source": "Bangalore City",
+      "sourceCode": "SBC",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 660,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1280,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 840,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 374,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-HYB",
+      "name": "Hyderabad Express",
+      "number": "12009",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Hyderabad Deccan",
+      "destinationCode": "HYB",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 705,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1290,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 845,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 377,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-HYB",
+      "name": "New Delhi Express",
+      "number": "12009R",
+      "type": "EXPRESS",
+      "source": "Hyderabad Deccan",
+      "sourceCode": "HYB",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 705,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1290,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 845,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 377,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-SC",
+      "name": "Hyderabad Express",
+      "number": "12010",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Secunderabad",
+      "destinationCode": "SC",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 750,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1300,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 850,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 380,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-SC",
+      "name": "New Delhi Express",
+      "number": "12010R",
+      "type": "EXPRESS",
+      "source": "Secunderabad",
+      "sourceCode": "SC",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 750,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1300,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 850,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 380,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-PUNE",
+      "name": "Pune Express",
+      "number": "12011",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Pune Junction",
+      "destinationCode": "PUNE",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 795,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1310,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 855,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 383,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-PUNE",
+      "name": "New Delhi Express",
+      "number": "12011R",
+      "type": "EXPRESS",
+      "source": "Pune Junction",
+      "sourceCode": "PUNE",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 795,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1310,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 855,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 383,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-ADI",
+      "name": "Ahmedabad Express",
+      "number": "12012",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Ahmedabad Junction",
+      "destinationCode": "ADI",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 840,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1320,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 860,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 386,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-ADI",
+      "name": "New Delhi Express",
+      "number": "12012R",
+      "type": "EXPRESS",
+      "source": "Ahmedabad Junction",
+      "sourceCode": "ADI",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 840,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1320,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 860,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 386,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-JP",
+      "name": "Jaipur Express",
+      "number": "12013",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Jaipur Junction",
+      "destinationCode": "JP",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 885,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1330,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 865,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 389,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-JP",
+      "name": "New Delhi Express",
+      "number": "12013R",
+      "type": "EXPRESS",
+      "source": "Jaipur Junction",
+      "sourceCode": "JP",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 885,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1330,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 865,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 389,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-JU",
+      "name": "Jodhpur Express",
+      "number": "12014",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Jodhpur Junction",
+      "destinationCode": "JU",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 930,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1340,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 870,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 392,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-JU",
+      "name": "New Delhi Express",
+      "number": "12014R",
+      "type": "EXPRESS",
+      "source": "Jodhpur Junction",
+      "sourceCode": "JU",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 930,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1340,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 870,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 392,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-UDZ",
+      "name": "Udaipur Express",
+      "number": "12015",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Udaipur City",
+      "destinationCode": "UDZ",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 975,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1350,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 875,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 395,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-UDZ",
+      "name": "New Delhi Express",
+      "number": "12015R",
+      "type": "EXPRESS",
+      "source": "Udaipur City",
+      "sourceCode": "UDZ",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 975,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1350,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 875,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 395,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-LKO",
+      "name": "Lucknow Express",
+      "number": "12016",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Lucknow Charbagh",
+      "destinationCode": "LKO",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1020,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1360,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 880,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 398,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-LKO",
+      "name": "New Delhi Express",
+      "number": "12016R",
+      "type": "EXPRESS",
+      "source": "Lucknow Charbagh",
+      "sourceCode": "LKO",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1020,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1360,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 880,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 398,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-CNB",
+      "name": "Kanpur Express",
+      "number": "12017",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Kanpur Central",
+      "destinationCode": "CNB",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1065,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1370,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 885,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 401,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-CNB",
+      "name": "New Delhi Express",
+      "number": "12017R",
+      "type": "EXPRESS",
+      "source": "Kanpur Central",
+      "sourceCode": "CNB",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1065,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1370,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 885,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 401,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-ALD",
+      "name": "Prayagraj Express",
+      "number": "12018",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Allahabad Junction",
+      "destinationCode": "ALD",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1110,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1380,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 890,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 404,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-ALD",
+      "name": "New Delhi Express",
+      "number": "12018R",
+      "type": "EXPRESS",
+      "source": "Allahabad Junction",
+      "sourceCode": "ALD",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1110,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1380,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 890,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 404,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-AGC",
+      "name": "Agra Express",
+      "number": "12019",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Agra Cantt",
+      "destinationCode": "AGC",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1155,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1390,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 895,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 407,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-AGC",
+      "name": "New Delhi Express",
+      "number": "12019R",
+      "type": "EXPRESS",
+      "source": "Agra Cantt",
+      "sourceCode": "AGC",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1155,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1390,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 895,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 407,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-BSB",
+      "name": "Varanasi Express",
+      "number": "12020",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Varanasi Junction",
+      "destinationCode": "BSB",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1200,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1400,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 900,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 410,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-BSB",
+      "name": "New Delhi Express",
+      "number": "12020R",
+      "type": "EXPRESS",
+      "source": "Varanasi Junction",
+      "sourceCode": "BSB",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1200,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1400,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 900,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 410,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-MTJ",
+      "name": "Mathura Express",
+      "number": "12021",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Mathura Junction",
+      "destinationCode": "MTJ",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1245,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1410,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 905,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 413,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-MTJ",
+      "name": "New Delhi Express",
+      "number": "12021R",
+      "type": "EXPRESS",
+      "source": "Mathura Junction",
+      "sourceCode": "MTJ",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1245,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1410,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 905,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 413,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-PNBE",
+      "name": "Patna Express",
+      "number": "12022",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Patna Junction",
+      "destinationCode": "PNBE",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1290,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1420,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 910,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 416,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-PNBE",
+      "name": "New Delhi Express",
+      "number": "12022R",
+      "type": "EXPRESS",
+      "source": "Patna Junction",
+      "sourceCode": "PNBE",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1290,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1420,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 910,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 416,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-GAYA",
+      "name": "Gaya Express",
+      "number": "12023",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Gaya Junction",
+      "destinationCode": "GAYA",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1335,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1430,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 915,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 419,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-GAYA",
+      "name": "New Delhi Express",
+      "number": "12023R",
+      "type": "EXPRESS",
+      "source": "Gaya Junction",
+      "sourceCode": "GAYA",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1335,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1430,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 915,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 419,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-BPL",
+      "name": "Bhopal Express",
+      "number": "12024",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Bhopal Junction",
+      "destinationCode": "BPL",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1380,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1440,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 920,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 422,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-BPL",
+      "name": "New Delhi Express",
+      "number": "12024R",
+      "type": "EXPRESS",
+      "source": "Bhopal Junction",
+      "sourceCode": "BPL",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1380,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1440,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 920,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 422,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-INDB",
+      "name": "Indore Express",
+      "number": "12025",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Indore Junction",
+      "destinationCode": "INDB",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1425,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1450,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 925,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 425,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-INDB",
+      "name": "New Delhi Express",
+      "number": "12025R",
+      "type": "EXPRESS",
+      "source": "Indore Junction",
+      "sourceCode": "INDB",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1425,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1450,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 925,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 425,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-GWL",
+      "name": "Gwalior Express",
+      "number": "12026",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Gwalior Junction",
+      "destinationCode": "GWL",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1470,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1460,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 930,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 428,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-GWL",
+      "name": "New Delhi Express",
+      "number": "12026R",
+      "type": "EXPRESS",
+      "source": "Gwalior Junction",
+      "sourceCode": "GWL",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1470,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1460,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 930,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 428,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-NGP",
+      "name": "Nagpur Express",
+      "number": "12027",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Nagpur Junction",
+      "destinationCode": "NGP",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1515,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1470,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 935,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 431,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-NGP",
+      "name": "New Delhi Express",
+      "number": "12027R",
+      "type": "EXPRESS",
+      "source": "Nagpur Junction",
+      "sourceCode": "NGP",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1515,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1470,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 935,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 431,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-AWB",
+      "name": "Aurangabad Express",
+      "number": "12028",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Aurangabad",
+      "destinationCode": "AWB",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1560,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1480,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 940,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 434,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-AWB",
+      "name": "New Delhi Express",
+      "number": "12028R",
+      "type": "EXPRESS",
+      "source": "Aurangabad",
+      "sourceCode": "AWB",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1560,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1480,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 940,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 434,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-VSKP",
+      "name": "Visakhapatnam Express",
+      "number": "12029",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Visakhapatnam",
+      "destinationCode": "VSKP",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1605,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1490,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 945,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 437,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-VSKP",
+      "name": "New Delhi Express",
+      "number": "12029R",
+      "type": "EXPRESS",
+      "source": "Visakhapatnam",
+      "sourceCode": "VSKP",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1605,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1490,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 945,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 437,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-BZA",
+      "name": "Vijayawada Express",
+      "number": "12030",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Vijayawada Junction",
+      "destinationCode": "BZA",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1650,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1500,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 950,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 440,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-BZA",
+      "name": "New Delhi Express",
+      "number": "12030R",
+      "type": "EXPRESS",
+      "source": "Vijayawada Junction",
+      "sourceCode": "BZA",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1650,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1500,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 950,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 440,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-ASR",
+      "name": "Amritsar Express",
+      "number": "12031",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Amritsar Junction",
+      "destinationCode": "ASR",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1695,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1510,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 955,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 443,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-ASR",
+      "name": "New Delhi Express",
+      "number": "12031R",
+      "type": "EXPRESS",
+      "source": "Amritsar Junction",
+      "sourceCode": "ASR",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1695,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1510,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 955,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 443,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-LDH",
+      "name": "Ludhiana Express",
+      "number": "12032",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Ludhiana Junction",
+      "destinationCode": "LDH",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1740,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1520,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 960,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 446,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-LDH",
+      "name": "New Delhi Express",
+      "number": "12032R",
+      "type": "EXPRESS",
+      "source": "Ludhiana Junction",
+      "sourceCode": "LDH",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1740,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1520,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 960,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 446,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-CDG",
+      "name": "Chandigarh Express",
+      "number": "12033",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Chandigarh",
+      "destinationCode": "CDG",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1785,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1530,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 965,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 449,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-CDG",
+      "name": "New Delhi Express",
+      "number": "12033R",
+      "type": "EXPRESS",
+      "source": "Chandigarh",
+      "sourceCode": "CDG",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1785,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1530,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 965,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 449,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-ST",
+      "name": "Surat Express",
+      "number": "12034",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Surat",
+      "destinationCode": "ST",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1830,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1540,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 970,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 452,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-ST",
+      "name": "New Delhi Express",
+      "number": "12034R",
+      "type": "EXPRESS",
+      "source": "Surat",
+      "sourceCode": "ST",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1830,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1540,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 970,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 452,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-BRC",
+      "name": "Vadodara Express",
+      "number": "12035",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Vadodara Junction",
+      "destinationCode": "BRC",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1875,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1550,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 975,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 455,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-BRC",
+      "name": "New Delhi Express",
+      "number": "12035R",
+      "type": "EXPRESS",
+      "source": "Vadodara Junction",
+      "sourceCode": "BRC",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1875,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1550,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 975,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 455,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-RJT",
+      "name": "Rajkot Express",
+      "number": "12036",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Rajkot Junction",
+      "destinationCode": "RJT",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1920,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1560,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 980,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 458,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-RJT",
+      "name": "New Delhi Express",
+      "number": "12036R",
+      "type": "EXPRESS",
+      "source": "Rajkot Junction",
+      "sourceCode": "RJT",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1920,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1560,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 980,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 458,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-ERS",
+      "name": "Kochi Express",
+      "number": "12037",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Kochi Ernakulam",
+      "destinationCode": "ERS",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1965,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1570,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 985,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 461,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-ERS",
+      "name": "New Delhi Express",
+      "number": "12037R",
+      "type": "EXPRESS",
+      "source": "Kochi Ernakulam",
+      "sourceCode": "ERS",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 1965,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1570,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 985,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 461,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-TVC",
+      "name": "Thiruvananthapuram Express",
+      "number": "12038",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Trivandrum Central",
+      "destinationCode": "TVC",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2010,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1580,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 990,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 464,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-TVC",
+      "name": "New Delhi Express",
+      "number": "12038R",
+      "type": "EXPRESS",
+      "source": "Trivandrum Central",
+      "sourceCode": "TVC",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2010,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1580,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 990,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 464,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-CBE",
+      "name": "Coimbatore Express",
+      "number": "12039",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Coimbatore Junction",
+      "destinationCode": "CBE",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2055,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1590,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 995,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 467,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-CBE",
+      "name": "New Delhi Express",
+      "number": "12039R",
+      "type": "EXPRESS",
+      "source": "Coimbatore Junction",
+      "sourceCode": "CBE",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2055,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1590,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 995,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 467,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-MDU",
+      "name": "Madurai Express",
+      "number": "12040",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Madurai Junction",
+      "destinationCode": "MDU",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2100,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1600,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1000,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 470,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-MDU",
+      "name": "New Delhi Express",
+      "number": "12040R",
+      "type": "EXPRESS",
+      "source": "Madurai Junction",
+      "sourceCode": "MDU",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2100,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1600,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1000,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 470,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-MYS",
+      "name": "Mysuru Express",
+      "number": "12041",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Mysuru Junction",
+      "destinationCode": "MYS",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2145,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1610,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1005,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 473,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-MYS",
+      "name": "New Delhi Express",
+      "number": "12041R",
+      "type": "EXPRESS",
+      "source": "Mysuru Junction",
+      "sourceCode": "MYS",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2145,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1610,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1005,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 473,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-MAQ",
+      "name": "Mangaluru Express",
+      "number": "12042",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Mangaluru Central",
+      "destinationCode": "MAQ",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2190,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1620,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1010,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 476,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-MAQ",
+      "name": "New Delhi Express",
+      "number": "12042R",
+      "type": "EXPRESS",
+      "source": "Mangaluru Central",
+      "sourceCode": "MAQ",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2190,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1620,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1010,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 476,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-GHY",
+      "name": "Guwahati Express",
+      "number": "12043",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Guwahati",
+      "destinationCode": "GHY",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2235,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1630,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1015,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 479,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-GHY",
+      "name": "New Delhi Express",
+      "number": "12043R",
+      "type": "EXPRESS",
+      "source": "Guwahati",
+      "sourceCode": "GHY",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2235,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1630,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1015,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 479,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-BBS",
+      "name": "Bhubaneswar Express",
+      "number": "12044",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Bhubaneswar",
+      "destinationCode": "BBS",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2280,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1640,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1020,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 482,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-BBS",
+      "name": "New Delhi Express",
+      "number": "12044R",
+      "type": "EXPRESS",
+      "source": "Bhubaneswar",
+      "sourceCode": "BBS",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2280,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1640,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1020,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 482,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-R",
+      "name": "Raipur Express",
+      "number": "12045",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Raipur Junction",
+      "destinationCode": "R",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2325,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1650,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1025,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 485,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-R",
+      "name": "New Delhi Express",
+      "number": "12045R",
+      "type": "EXPRESS",
+      "source": "Raipur Junction",
+      "sourceCode": "R",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2325,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1650,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1025,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 485,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-RNC",
+      "name": "Ranchi Express",
+      "number": "12046",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Ranchi Junction",
+      "destinationCode": "RNC",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2370,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1660,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1030,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 488,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-RNC",
+      "name": "New Delhi Express",
+      "number": "12046R",
+      "type": "EXPRESS",
+      "source": "Ranchi Junction",
+      "sourceCode": "RNC",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2370,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1660,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1030,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 488,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-DDN",
+      "name": "Dehradun Express",
+      "number": "12047",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Dehradun",
+      "destinationCode": "DDN",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2415,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1670,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1035,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 491,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-DDN",
+      "name": "New Delhi Express",
+      "number": "12047R",
+      "type": "EXPRESS",
+      "source": "Dehradun",
+      "sourceCode": "DDN",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2415,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1670,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1035,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 491,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-HW",
+      "name": "Haridwar Express",
+      "number": "12048",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Haridwar Junction",
+      "destinationCode": "HW",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2460,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1680,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1040,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 494,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-HW",
+      "name": "New Delhi Express",
+      "number": "12048R",
+      "type": "EXPRESS",
+      "source": "Haridwar Junction",
+      "sourceCode": "HW",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2460,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1680,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1040,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 494,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-out-SML",
+      "name": "Shimla Express",
+      "number": "12049",
+      "type": "EXPRESS",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Shimla",
+      "destinationCode": "SML",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2505,
+      "rating": 4,
+      "onTimePercent": 85,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1690,
+          "available": 10,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1045,
+          "available": 20,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 497,
+          "available": 50,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "id": "hub-in-SML",
+      "name": "New Delhi Express",
+      "number": "12049R",
+      "type": "EXPRESS",
+      "source": "Shimla",
+      "sourceCode": "SML",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "duration": "10h 30m",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 2505,
+      "rating": 4.1,
+      "onTimePercent": 82,
+      "classes": [
+        {
+          "name": "2nd AC",
+          "code": "2A",
+          "basePrice": 1690,
+          "available": 5,
+          "total": 40,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1045,
+          "available": 15,
+          "total": 60,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 497,
+          "available": 30,
+          "total": 120,
+          "status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "name": "Wodeyar Express",
+      "number": "090306",
+      "source": "Mysuru Junction",
+      "destination": "Bangalore City",
+      "sourceCode": "MYS",
+      "destinationCode": "SBC",
+      "departure": "10:00 AM",
+      "arrival": "06:00 PM",
+      "duration": "8h 00m",
+      "type": "EXPRESS",
+      "classes": [
+        {
+          "name": "Sleeper",
+          "code": "SL",
+          "basePrice": 500,
+          "available": 120,
+          "total": 200,
+          "status": "AVAILABLE"
+        },
+        {
+          "name": "3rd AC",
+          "code": "3A",
+          "basePrice": 1200,
+          "available": 64,
+          "total": 100,
+          "status": "AVAILABLE"
+        }
+      ],
+      "rating": 4.5,
+      "onTimePercent": 90,
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "distance": 500,
+      "id": "t1777983760722"
+    }
+  ],
+  "bookings": [
+    {
+      "userId": "u1",
+      "trainName": "Bangalore Express",
+      "trainNumber": "12008",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Bangalore City",
+      "destinationCode": "SBC",
+      "departure": "08:00",
+      "arrival": "18:30",
+      "date": "2026-05-05",
+      "class": "2nd AC",
+      "passengers": [
+        {
+          "name": "Harsha S",
+          "age": 22,
+          "gender": "M",
+          "berthPreference": "Middle",
+          "seatNumber": "23 - Coach B4"
+        }
+      ],
+      "totalAmount": 1303,
+      "duration": "10h 30m",
+      "coachNumber": "Coach B4",
+      "seatNumbers": [
+        "23"
+      ],
+      "paymentMethod": "Net Banking",
+      "id": "bk1777965330404",
+      "pnr": "PNR6521537",
+      "bookedAt": "2026-05-05T07:15:30.405Z",
+      "status": "CONFIRMED"
+    },
+    {
+      "userId": "u1",
+      "trainName": "Deccan Queen",
+      "trainNumber": "12123",
+      "source": "Mumbai CST",
+      "sourceCode": "CSTM",
+      "destination": "Pune Junction",
+      "destinationCode": "PUNE",
+      "departure": "07:15",
+      "arrival": "10:25",
+      "date": "2026-05-05",
+      "class": "Chair Car",
+      "passengers": [
+        {
+          "name": "Harsha Kumar",
+          "age": 111,
+          "gender": "M",
+          "berthPreference": "Lower",
+          "seatNumber": "23 - Coach B4"
+        }
+      ],
+      "totalAmount": 428,
+      "duration": "3h 10m",
+      "coachNumber": "Coach B4",
+      "seatNumbers": [
+        "23"
+      ],
+      "paymentMethod": "UPI",
+      "id": "bk1777965384792",
+      "pnr": "PNR8001117",
+      "bookedAt": "2026-05-05T07:16:24.792Z",
+      "status": "CANCELLED"
+    },
+    {
+      "userId": "u1",
+      "trainName": "New Delhi Express",
+      "trainNumber": "12008R",
+      "source": "Bangalore City",
+      "sourceCode": "SBC",
+      "destination": "New Delhi",
+      "destinationCode": "NDLS",
+      "departure": "20:00",
+      "arrival": "06:30",
+      "date": "2026-05-05",
+      "class": "2nd AC",
+      "passengers": [
+        {
+          "name": "Harsha S",
+          "age": 25,
+          "gender": "M",
+          "berthPreference": "Upper",
+          "seatNumber": "23 - Coach B4"
+        }
+      ],
+      "totalAmount": 1303,
+      "duration": "10h 30m",
+      "coachNumber": "Coach B4",
+      "seatNumbers": [
+        "23"
+      ],
+      "paymentMethod": "Card",
+      "id": "bk1777966808044",
+      "pnr": "PNR8593258",
+      "bookedAt": "2026-05-05T07:40:08.044Z",
+      "status": "CONFIRMED"
+    },
+    {
+      "userId": "u1",
+      "trainName": "Bangalore Shatabdi",
+      "trainNumber": "12007",
+      "source": "Mysuru Junction",
+      "sourceCode": "MYS",
+      "destination": "Chennai Central",
+      "destinationCode": "MAS",
+      "departure": "06:10",
+      "arrival": "12:30",
+      "date": "2026-05-06",
+      "class": "Exec Chair Car",
+      "passengers": [
+        {
+          "name": "Harsha S",
+          "age": 18,
+          "gender": "M",
+          "berthPreference": "Upper",
+          "seatNumber": "23 - Coach B4"
+        },
+        {
+          "name": "abcd",
+          "age": 43,
+          "gender": "F",
+          "berthPreference": "Middle",
+          "seatNumber": "23 - Coach B4"
+        },
+        {
+          "name": "dcba",
+          "age": 56,
+          "gender": "M",
+          "berthPreference": "Window",
+          "seatNumber": "23 - Coach B4"
+        }
+      ],
+      "totalAmount": 4825,
+      "duration": "6h 20m",
+      "coachNumber": "Coach B4",
+      "seatNumbers": [
+        "23",
+        "24",
+        "25"
+      ],
+      "paymentMethod": "UPI",
+      "id": "bk1777974969906",
+      "pnr": "PNR8227500",
+      "bookedAt": "2026-05-05T09:56:09.906Z",
+      "status": "CONFIRMED"
+    },
+    {
+      "userId": "u1",
+      "trainName": "Shatabdi Express",
+      "trainNumber": "12001",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Bhopal Junction",
+      "destinationCode": "BPL",
+      "departure": "06:00",
+      "arrival": "13:50",
+      "date": "2026-05-05",
+      "class": "Chair Car",
+      "passengers": [
+        {
+          "name": "Harsha S",
+          "age": 15,
+          "gender": "M",
+          "berthPreference": "Lower",
+          "seatNumber": "23 - Coach B4"
+        }
+      ],
+      "totalAmount": 1201,
+      "duration": "7h 50m",
+      "coachNumber": "Coach B4",
+      "seatNumbers": [
+        "23"
+      ],
+      "paymentMethod": "UPI",
+      "status": "CONFIRMED",
+      "id": "bk1777976522232",
+      "pnr": "PNR2304588",
+      "bookedAt": "2026-05-05T10:22:02.232Z"
+    },
+    {
+      "userId": "u1778659620584",
+      "trainName": "Bangalore Rajdhani",
+      "trainNumber": "22691",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Bangalore City",
+      "destinationCode": "SBC",
+      "departure": "20:00",
+      "arrival": "05:00",
+      "date": "2026-05-13",
+      "class": "1st AC",
+      "passengers": [
+        {
+          "name": "Basanth ",
+          "age": 25,
+          "gender": "M",
+          "berthPreference": "Lower",
+          "seatNumber": "23 - Coach B4"
+        }
+      ],
+      "totalAmount": 6210,
+      "duration": "33h 00m",
+      "coachNumber": "Coach B4",
+      "seatNumbers": [
+        "23"
+      ],
+      "paymentMethod": "UPI",
+      "status": "CONFIRMED",
+      "id": "bk1778659758279",
+      "pnr": "PNR9539712",
+      "bookedAt": "2026-05-13T08:09:18.279Z"
+    },
+    {
+      "userId": "u1",
+      "trainName": "Shatabdi Express",
+      "trainNumber": "12001",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Bhopal Junction",
+      "destinationCode": "BPL",
+      "departure": "06:00",
+      "arrival": "13:50",
+      "date": "2026-05-13",
+      "class": "Chair Car",
+      "passengers": [
+        {
+          "name": "Harsha S",
+          "age": 25,
+          "gender": "M",
+          "berthPreference": "Upper",
+          "seatNumber": "23 - Coach B4"
+        }
+      ],
+      "totalAmount": 1201,
+      "duration": "7h 50m",
+      "coachNumber": "Coach B4",
+      "seatNumbers": [
+        "23"
+      ],
+      "paymentMethod": "Net Banking",
+      "status": "CANCELLED",
+      "id": "bk1778661090433",
+      "pnr": "PNR1708770",
+      "bookedAt": "2026-05-13T08:31:30.433Z",
+      "cancelledAt": "2026-05-13T08:32:01.944Z"
+    }
+  ]
+}
