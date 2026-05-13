@@ -1,4 +1,4 @@
-import { sql } from '@vercel/postgres';
+import postgres from 'postgres';
 import { Train, Booking } from './mockData';
 
 export interface PaymentMethod {
@@ -30,10 +30,18 @@ export interface User {
   notifications?: NotificationSettings;
 }
 
+// Create a single postgres client (works with Supabase & any standard Postgres)
+const sql = postgres(process.env.POSTGRES_URL!, {
+  ssl: 'require',
+  max: 1, // important for serverless / edge functions
+});
+
+export { sql };
+
 // PostgreSQL Helpers
 
 export async function getTrains(): Promise<Train[]> {
-  const { rows } = await sql`SELECT * FROM trains;`;
+  const rows = await sql`SELECT * FROM trains;`;
   return rows.map(r => ({
     id: r.id,
     number: r.number,
@@ -55,7 +63,7 @@ export async function getTrains(): Promise<Train[]> {
 }
 
 export async function getUsers(): Promise<User[]> {
-  const { rows } = await sql`SELECT * FROM users;`;
+  const rows = await sql`SELECT * FROM users;`;
   return rows.map(r => ({
     id: r.id,
     name: r.name,
@@ -71,14 +79,14 @@ export async function getUsers(): Promise<User[]> {
 }
 
 export async function getBookings(userId?: string): Promise<Booking[]> {
-  let result;
+  let rows;
   if (userId) {
-    result = await sql`SELECT * FROM bookings WHERE user_id = ${userId} ORDER BY booked_at DESC;`;
+    rows = await sql`SELECT * FROM bookings WHERE user_id = ${userId} ORDER BY booked_at DESC;`;
   } else {
-    result = await sql`SELECT * FROM bookings ORDER BY booked_at DESC;`;
+    rows = await sql`SELECT * FROM bookings ORDER BY booked_at DESC;`;
   }
-  
-  return result.rows.map(r => ({
+
+  return rows.map(r => ({
     id: r.id,
     userId: r.user_id,
     pnr: r.pnr,
@@ -108,35 +116,35 @@ export async function createBooking(booking: Booking): Promise<Booking> {
   const id = 'bk' + Date.now();
   const pnr = booking.pnr || ('PNR' + Math.floor(Math.random() * 9000000 + 1000000));
   const bookedAt = new Date().toISOString();
-  
+
   await sql`
     INSERT INTO bookings (
-      id, user_id, pnr, train_name, train_number, source, source_code, 
-      destination, destination_code, departure, arrival, duration, date, class, 
-      passengers, total_amount, status, booked_at, payment_method, 
+      id, user_id, pnr, train_name, train_number, source, source_code,
+      destination, destination_code, departure, arrival, duration, date, class,
+      passengers, total_amount, status, booked_at, payment_method,
       seat_numbers, coach_number
     ) VALUES (
-      ${id}, ${booking.userId}, ${pnr}, ${booking.trainName}, ${booking.trainNumber}, 
-      ${booking.source}, ${booking.sourceCode}, ${booking.destination}, 
-      ${booking.destinationCode}, ${booking.departure}, ${booking.arrival}, 
-      ${booking.duration}, ${booking.date}, ${booking.class}, 
-      ${JSON.stringify(booking.passengers)}, ${booking.totalAmount}, 
-      ${booking.status || 'CONFIRMED'}, ${bookedAt}, ${booking.paymentMethod}, 
+      ${id}, ${booking.userId}, ${pnr}, ${booking.trainName}, ${booking.trainNumber},
+      ${booking.source}, ${booking.sourceCode}, ${booking.destination},
+      ${booking.destinationCode}, ${booking.departure}, ${booking.arrival},
+      ${booking.duration}, ${booking.date}, ${booking.class},
+      ${JSON.stringify(booking.passengers)}, ${booking.totalAmount},
+      ${booking.status || 'CONFIRMED'}, ${bookedAt}, ${booking.paymentMethod},
       ${`{${booking.seatNumbers?.join(',') || ''}}`}, ${booking.coachNumber}
     );
   `;
-  
+
   return { ...booking, id, pnr, bookedAt, status: booking.status || 'CONFIRMED' };
 }
 
 export async function cancelBooking(id: string): Promise<boolean> {
   const cancelledAt = new Date().toISOString();
   const result = await sql`
-    UPDATE bookings 
+    UPDATE bookings
     SET status = 'CANCELLED', cancelled_at = ${cancelledAt}
     WHERE id = ${id};
   `;
-  return (result.rowCount ?? 0) > 0;
+  return (result.count ?? 0) > 0;
 }
 
 export async function createUser(user: User): Promise<User> {
@@ -149,5 +157,5 @@ export async function createUser(user: User): Promise<User> {
 
 export async function deleteUser(id: string): Promise<boolean> {
   const result = await sql`DELETE FROM users WHERE id = ${id};`;
-  return (result.rowCount ?? 0) > 0;
+  return (result.count ?? 0) > 0;
 }

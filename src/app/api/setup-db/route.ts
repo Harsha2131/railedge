@@ -1,5 +1,5 @@
-import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
+import { sql } from '@/lib/db';
 import { MOCK_TRAINS } from '@/lib/mockData';
 
 export async function GET() {
@@ -89,26 +89,26 @@ export async function GET() {
     for (const train of MOCK_TRAINS) {
       await sql`
         INSERT INTO trains (
-          id, number, name, type, source, source_code, destination, 
-          destination_code, departure, arrival, duration, rating, 
+          id, number, name, type, source, source_code, destination,
+          destination_code, departure, arrival, duration, rating,
           on_time_percent, distance, classes, days
         )
         VALUES (
-          ${train.id}, 
-          ${train.number}, 
-          ${train.name}, 
+          ${train.id},
+          ${train.number},
+          ${train.name},
           ${train.type},
-          ${train.source}, 
-          ${train.sourceCode}, 
-          ${train.destination}, 
-          ${train.destinationCode}, 
-          ${train.departure}, 
-          ${train.arrival}, 
-          ${train.duration}, 
+          ${train.source},
+          ${train.sourceCode},
+          ${train.destination},
+          ${train.destinationCode},
+          ${train.departure},
+          ${train.arrival},
+          ${train.duration},
           ${train.rating},
           ${train.onTimePercent},
           ${train.distance},
-          ${JSON.stringify(train.classes)}, 
+          ${JSON.stringify(train.classes)},
           ${`{${train.days.join(',')}}`}
         )
         ON CONFLICT (id) DO NOTHING;
@@ -118,6 +118,9 @@ export async function GET() {
     return NextResponse.json({ message: 'Database setup successful!' });
   } catch (error) {
     console.error('Setup DB Error:', error);
-    return NextResponse.json({ error: 'Failed to setup database', details: error instanceof Error ? error.message : String(error) }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to setup database', details: error instanceof Error ? error.message : String(error) },
+      { status: 500 }
+    );
   }
 }
