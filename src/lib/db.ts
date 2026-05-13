@@ -30,8 +30,11 @@ export interface User {
   notifications?: NotificationSettings;
 }
 
-// Create a single postgres client (works with Supabase & any standard Postgres)
-const sql = postgres(process.env.POSTGRES_URL!, {
+// Use POSTGRES_URL (pooled) or fall back to POSTGRES_URL_NON_POOLING (direct)
+// Both are provided by Supabase's Vercel integration
+const connectionString = process.env.POSTGRES_URL || process.env.POSTGRES_URL_NON_POOLING!;
+
+const sql = postgres(connectionString, {
   ssl: 'require',
   max: 1, // important for serverless / edge functions
 });
