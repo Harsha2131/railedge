@@ -9,8 +9,8 @@ export async function GET(request: Request) {
     const to = searchParams.get('to');
     const trainClass = searchParams.get('class');
 
-    const db = await readDB();
-    let trains = db.trains;
+    const { getTrains } = await import('@/lib/db');
+    let trains = await getTrains();
 
     if (from) {
       trains = trains.filter(t => 

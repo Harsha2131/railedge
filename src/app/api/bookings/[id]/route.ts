@@ -7,18 +7,17 @@ export async function PATCH(
 ) {
   try {
     const { id } = await params;
-    const db = await readDB();
-    const idx = db.bookings.findIndex(b => b.id === id);
+    const { cancelBooking, getBookings } = await import('@/lib/db');
+    const success = await cancelBooking(id);
 
-    if (idx === -1) {
+    if (!success) {
       return NextResponse.json({ error: 'Booking not found' }, { status: 404 });
     }
 
-    db.bookings[idx].status = 'CANCELLED';
-    db.bookings[idx].cancelledAt = new Date().toISOString();
-    await writeDB(db);
+    const bookings = await getBookings();
+    const updated = bookings.find(b => b.id === id);
 
-    return NextResponse.json(db.bookings[idx]);
+    return NextResponse.json(updated);
   } catch (error) {
     console.error('Cancel booking error:', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });

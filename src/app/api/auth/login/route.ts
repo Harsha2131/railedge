@@ -10,8 +10,9 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Email and password are required' }, { status: 400 });
     }
 
-    const db = await readDB();
-    const user = db.users.find(u => u.email === email && u.password === password);
+    const { getUsers } = await import('@/lib/db');
+    const users = await getUsers();
+    const user = users.find(u => u.email === email && u.password === password);
 
     if (!user) {
       return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 });

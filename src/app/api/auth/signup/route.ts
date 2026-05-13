@@ -14,9 +14,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Password must be at least 6 characters' }, { status: 400 });
     }
 
-    const db = await readDB();
+    const { getUsers, createUser } = await import('@/lib/db');
+    const users = await getUsers();
     
-    if (db.users.some(u => u.email === email)) {
+    if (users.some(u => u.email === email)) {
       return NextResponse.json({ error: 'Email is already registered' }, { status: 400 });
     }
 
@@ -28,8 +29,7 @@ export async function POST(request: Request) {
       role: 'USER',
     };
 
-    db.users.push(newUser);
-    await writeDB(db);
+    await createUser(newUser);
 
     const userData = {
       id: newUser.id,
