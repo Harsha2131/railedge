@@ -98,10 +98,22 @@ function TicketModal({ booking, onClose }: { booking: Booking; onClose: () => vo
             </div>
           </div>
 
-          {booking.status === 'CONFIRMED' && (
+          {(booking.status === 'CONFIRMED' || booking.status === 'WAITING') && (
             <div style={{ padding: '1rem 1.5rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', display: 'flex', gap: '0.75rem' }}>
               <button onClick={() => window.print()} style={{ flex: 1, background: 'linear-gradient(135deg,#2563eb,#7c3aed)', color: '#fff', border: 'none', borderRadius: 10, padding: '0.7rem', fontWeight: 700, cursor: 'pointer', fontSize: '0.875rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-                <Download size={15} /> Download PDF Ticket
+                <Download size={15} /> Download PDF
+              </button>
+              <button 
+                onClick={() => {
+                  if (confirm('Are you sure you want to cancel this ticket?')) {
+                    // We'll pass a special function or handle it via a window event for simplicity in this demo
+                    window.dispatchEvent(new CustomEvent('cancel-ticket', { detail: booking.id }));
+                    onClose();
+                  }
+                }}
+                style={{ flex: 1, background: '#fff', color: '#dc2626', border: '1px solid #fecaca', borderRadius: 10, padding: '0.7rem', fontWeight: 700, cursor: 'pointer', fontSize: '0.875rem' }}
+              >
+                Cancel Ticket
               </button>
             </div>
           )}
@@ -139,6 +151,10 @@ export default function MyTicketsPage() {
     } else {
       setIsLoading(false);
     }
+
+    const listener = (e: any) => handleCancel(e.detail);
+    window.addEventListener('cancel-ticket', listener);
+    return () => window.removeEventListener('cancel-ticket', listener);
   }, [user]);
 
   if (!user) {
