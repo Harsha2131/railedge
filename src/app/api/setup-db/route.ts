@@ -31,6 +31,12 @@ export async function GET() {
       );
     `;
 
+    // Ensure missing columns are added if table already existed
+    await sql`
+      ALTER TABLE users 
+      ADD COLUMN IF NOT EXISTS two_factor_enabled BOOLEAN DEFAULT FALSE;
+    `;
+
     await sql`
       CREATE TABLE IF NOT EXISTS trains (
         id TEXT PRIMARY KEY,

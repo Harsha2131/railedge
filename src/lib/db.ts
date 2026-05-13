@@ -95,6 +95,28 @@ export async function createUser(user: User): Promise<User> {
   return user;
 }
 
+export async function updateUser(id: string, updates: Partial<User>): Promise<boolean> {
+  const dbUpdates: any = {};
+  if (updates.name !== undefined) dbUpdates.name = updates.name;
+  if (updates.email !== undefined) dbUpdates.email = updates.email;
+  if (updates.password !== undefined) dbUpdates.password = updates.password;
+  if (updates.role !== undefined) dbUpdates.role = updates.role;
+  if (updates.phone !== undefined) dbUpdates.phone = updates.phone;
+  if (updates.city !== undefined) dbUpdates.city = updates.city;
+  if (updates.gender !== undefined) dbUpdates.gender = updates.gender;
+  if (updates.twoFactorEnabled !== undefined) dbUpdates.two_factor_enabled = updates.twoFactorEnabled;
+  if (updates.paymentMethods !== undefined) dbUpdates.payment_methods = updates.paymentMethods;
+  if (updates.notifications !== undefined) dbUpdates.notifications = updates.notifications;
+
+  const { error, count } = await supabase
+    .from('users')
+    .update(dbUpdates, { count: 'exact' })
+    .eq('id', id);
+    
+  if (error) throw new Error(error.message);
+  return (count ?? 0) > 0;
+}
+
 export async function deleteUser(id: string): Promise<boolean> {
   const { error, count } = await supabase
     .from('users')
