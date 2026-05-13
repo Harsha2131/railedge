@@ -241,7 +241,7 @@ export default function MyTicketsPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {filtered.map(booking => {
                 const st = STATUS_STYLES[booking.status];
-                const isUpcoming = booking.date >= todayString && booking.status === 'CONFIRMED';
+                const isUpcoming = booking.date >= todayString && (booking.status === 'CONFIRMED' || booking.status === 'WAITING');
                 return (
                   <div key={booking.id} className="ticket-card" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 16, overflow: 'hidden', transition: 'all 0.2s' }}>
                     <div style={{ background: 'linear-gradient(135deg, #0f172a, #1e3a5f)', padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

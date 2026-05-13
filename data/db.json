@@ -5960,6 +5960,39 @@
       "pnr": "PNR1708770",
       "bookedAt": "2026-05-13T08:31:30.433Z",
       "cancelledAt": "2026-05-13T08:32:01.944Z"
+    },
+    {
+      "userId": "u1",
+      "trainName": "Shatabdi Express",
+      "trainNumber": "12001",
+      "source": "New Delhi",
+      "sourceCode": "NDLS",
+      "destination": "Bhopal Junction",
+      "destinationCode": "BPL",
+      "departure": "06:00",
+      "arrival": "13:50",
+      "date": "2026-05-13",
+      "class": "Chair Car",
+      "passengers": [
+        {
+          "name": "Harsha S",
+          "age": 19,
+          "gender": "M",
+          "berthPreference": "No Preference",
+          "seatNumber": "23 - Coach B4"
+        }
+      ],
+      "totalAmount": 1201,
+      "duration": "7h 50m",
+      "coachNumber": "Coach B4",
+      "seatNumbers": [
+        "23"
+      ],
+      "paymentMethod": "UPI",
+      "status": "CONFIRMED",
+      "id": "bk1778694177801",
+      "pnr": "PNR2782377",
+      "bookedAt": "2026-05-13T17:42:57.801Z"
     }
   ]
 }
