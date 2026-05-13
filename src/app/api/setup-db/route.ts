@@ -26,6 +26,7 @@ export async function GET() {
         id TEXT PRIMARY KEY,
         number TEXT NOT NULL,
         name TEXT NOT NULL,
+        type TEXT NOT NULL,
         source TEXT NOT NULL,
         source_code TEXT NOT NULL,
         destination TEXT NOT NULL,
@@ -33,8 +34,11 @@ export async function GET() {
         departure TEXT NOT NULL,
         arrival TEXT NOT NULL,
         duration TEXT NOT NULL,
+        rating NUMERIC NOT NULL,
+        on_time_percent NUMERIC NOT NULL,
+        distance NUMERIC NOT NULL,
         classes JSONB NOT NULL,
-        days_active TEXT[]
+        days TEXT[]
       );
     `;
 
@@ -52,6 +56,7 @@ export async function GET() {
         destination_code TEXT NOT NULL,
         departure TEXT NOT NULL,
         arrival TEXT NOT NULL,
+        duration TEXT NOT NULL,
         date TEXT NOT NULL,
         class TEXT NOT NULL,
         passengers JSONB NOT NULL,
@@ -59,7 +64,9 @@ export async function GET() {
         status TEXT NOT NULL DEFAULT 'CONFIRMED',
         booked_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
         cancelled_at TIMESTAMPTZ,
-        payment_method TEXT
+        payment_method TEXT,
+        seat_numbers TEXT[],
+        coach_number TEXT
       );
     `;
 
@@ -81,11 +88,16 @@ export async function GET() {
     // 5. Seed Initial Trains
     for (const train of MOCK_TRAINS) {
       await sql`
-        INSERT INTO trains (id, number, name, source, source_code, destination, destination_code, departure, arrival, duration, classes, days_active)
+        INSERT INTO trains (
+          id, number, name, type, source, source_code, destination, 
+          destination_code, departure, arrival, duration, rating, 
+          on_time_percent, distance, classes, days
+        )
         VALUES (
           ${train.id}, 
           ${train.number}, 
           ${train.name}, 
+          ${train.type},
           ${train.source}, 
           ${train.sourceCode}, 
           ${train.destination}, 
@@ -93,8 +105,11 @@ export async function GET() {
           ${train.departure}, 
           ${train.arrival}, 
           ${train.duration}, 
+          ${train.rating},
+          ${train.onTimePercent},
+          ${train.distance},
           ${JSON.stringify(train.classes)}, 
-          ${train.days}
+          ${`{${train.days.join(',')}}`}
         )
         ON CONFLICT (id) DO NOTHING;
       `;

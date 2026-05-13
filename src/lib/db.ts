@@ -38,6 +38,7 @@ export async function getTrains(): Promise<Train[]> {
     id: r.id,
     number: r.number,
     name: r.name,
+    type: r.type,
     source: r.source,
     sourceCode: r.source_code,
     destination: r.destination,
@@ -45,8 +46,11 @@ export async function getTrains(): Promise<Train[]> {
     departure: r.departure,
     arrival: r.arrival,
     duration: r.duration,
+    rating: Number(r.rating),
+    onTimePercent: Number(r.on_time_percent),
+    distance: Number(r.distance),
     classes: typeof r.classes === 'string' ? JSON.parse(r.classes) : r.classes,
-    days: r.days_active
+    days: r.days
   }));
 }
 
@@ -93,7 +97,10 @@ export async function getBookings(userId?: string): Promise<Booking[]> {
     status: r.status as 'CONFIRMED' | 'CANCELLED' | 'WAITING',
     bookedAt: r.booked_at,
     cancelledAt: r.cancelled_at,
-    paymentMethod: r.payment_method
+    paymentMethod: r.payment_method,
+    duration: r.duration,
+    seatNumbers: r.seat_numbers,
+    coachNumber: r.coach_number
   }));
 }
 
@@ -105,15 +112,17 @@ export async function createBooking(booking: Booking): Promise<Booking> {
   await sql`
     INSERT INTO bookings (
       id, user_id, pnr, train_name, train_number, source, source_code, 
-      destination, destination_code, departure, arrival, date, class, 
-      passengers, total_amount, status, booked_at, payment_method
+      destination, destination_code, departure, arrival, duration, date, class, 
+      passengers, total_amount, status, booked_at, payment_method, 
+      seat_numbers, coach_number
     ) VALUES (
       ${id}, ${booking.userId}, ${pnr}, ${booking.trainName}, ${booking.trainNumber}, 
       ${booking.source}, ${booking.sourceCode}, ${booking.destination}, 
       ${booking.destinationCode}, ${booking.departure}, ${booking.arrival}, 
-      ${booking.date}, ${booking.class}, ${JSON.stringify(booking.passengers)}, 
-      ${booking.totalAmount}, ${booking.status || 'CONFIRMED'}, ${bookedAt}, 
-      ${booking.paymentMethod}
+      ${booking.duration}, ${booking.date}, ${booking.class}, 
+      ${JSON.stringify(booking.passengers)}, ${booking.totalAmount}, 
+      ${booking.status || 'CONFIRMED'}, ${bookedAt}, ${booking.paymentMethod}, 
+      ${`{${booking.seatNumbers?.join(',') || ''}}`}, ${booking.coachNumber}
     );
   `;
   
@@ -127,7 +136,7 @@ export async function cancelBooking(id: string): Promise<boolean> {
     SET status = 'CANCELLED', cancelled_at = ${cancelledAt}
     WHERE id = ${id};
   `;
-  return result.rowCount > 0;
+  return (result.rowCount ?? 0) > 0;
 }
 
 export async function createUser(user: User): Promise<User> {
@@ -140,5 +149,5 @@ export async function createUser(user: User): Promise<User> {
 
 export async function deleteUser(id: string): Promise<boolean> {
   const result = await sql`DELETE FROM users WHERE id = ${id};`;
-  return result.rowCount > 0;
+  return (result.rowCount ?? 0) > 0;
 }
